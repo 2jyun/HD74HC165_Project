@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+//한글이 깨질 경우 UTC-8에서 EUC-KR로 바꾸시길 바랍니다.
 module HD74HC165(clk, clock_in_hibit, serial_in, q, shift_load, qh, qh_bar);
     input shift_load;
     input clk;
