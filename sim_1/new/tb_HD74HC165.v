@@ -25,11 +25,11 @@ module tb_HD74HC165();
     end
 
     initial begin
-        //Shift mode with serial Inputd
+        //Shift mode with serial Input
         serial_in <= 1; // Serial Input
-        repeat (8) @(posedge clk); // clock의 8클럭 동안 입력
+        repeat (8) @(posedge clk); // clock의 8클럭 입력 즉 FF입력
         serial_in <= 0;
-        repeat (9) @(posedge clk); // clock의 9클럭 동안 출력
+        repeat (9) @(posedge clk); // clock의 9클럭 동안 FF로 나오는지 출력확인
 
         //load Mode parallel Input
         shift_load <= 0;
