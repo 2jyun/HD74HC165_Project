@@ -20,6 +20,7 @@ module tb_HD74HC165();
         clock_in_hibit = 0;
         serial_in = 0;
         q = 8'b0000_0000;
+        //모니터링
         $monitor("Time:%d [ns], Qh: %d ", $time(), qh);
         $monitor("Time:%d [ns], Qh_bar: %d", $time(), qh_bar);
     end

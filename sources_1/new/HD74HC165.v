@@ -11,7 +11,7 @@ module HD74HC165(clk, clock_in_hibit, serial_in, q, shift_load, qh, qh_bar);
     wire qh_bar;
     wire qh;
     reg [7:0] store = 8'b0000_0000;
-    always@(posedge clk)begin // syncronous 동작
+    always@(posedge clk)begin // Combinational logic
         //clock_in_hibit이 LOW일 때 동작 HIGH이면 값을 유지하고 동작 정지 
         if(!clock_in_hibit)begin 
             if(shift_load)begin // 1일 때 shift_mode 병렬 입력 차단 
